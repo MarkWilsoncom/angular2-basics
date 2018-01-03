@@ -19,4 +19,12 @@ export class AppComponent {
   // } else {
   //   this.dynAlign = 'center';
   // }
+
+  getName() {
+    return 'Bob';
+  }
+
+  setAge(age: number) {
+    this.age = age;
+  }
 }

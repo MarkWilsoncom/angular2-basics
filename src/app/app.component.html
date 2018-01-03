@@ -10,5 +10,16 @@
 <app-users></app-users>
 <p>My age is {{ age }}</p>
 <p>Name: {{ person.name }}, Alte: {{ person.age }} </p>
+<p>{{ getName() }}</p>
 <!-- Bind age component property to attribute 'value' of html element input -->
 <input type="text" [value]="age">
+<p>
+<input type="text" [value]="getName()">
+</p>
+<!-- Event binding: on click directly assign 30 to age property in component -->
+<!-- <button (click)="age = 30">Click me</button> -->
+<!-- Event binding: on click assign 30 to age property in component using a method -->
+<button (click)="setAge(33)">Click me</button>
+<!-- Two-way binding -->
+<!-- FormsModule MUSS in app.module.ts in den Imports eingetragen sein -->
+<input type="text" [(ngModel)]="person.name">
